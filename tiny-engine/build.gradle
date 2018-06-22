@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+compileTestJava {
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+	options.compilerArgs += '-parameters'
+}
+
+repositories {
+	mavenCentral()
+}
+
+test {
+	useJUnitPlatform()
+}
+
+ext.junitPlatformVersion = '1.2.0'
+ext.junitJupiterVersion = '5.2.0'
+
+dependencies {
+	compile("org.junit.platform:junit-platform-engine:${junitPlatformVersion}")
+	compile("org.junit.platform:junit-platform-commons:${junitPlatformVersion}")
+}
+
+wrapper {
+	description = 'Generates gradlew[.bat] scripts'
+	gradleVersion = '4.8.1'
+}

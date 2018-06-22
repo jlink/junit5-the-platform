@@ -28,3 +28,4 @@ out/
 # Misc
 *.log
 *.graphml
+.DS_Store

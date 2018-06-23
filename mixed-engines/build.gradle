@@ -22,13 +22,16 @@ test {
 }
 
 dependencies {
-	testCompile("org.assertj:assertj-core:3.9.1")
-
 	testCompile "net.jqwik:jqwik:0.8.11"
 
 	testCompile("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
 
 	testCompile("org.junit.vintage:junit-vintage-engine:${junitJupiterVersion}")
+
+	testCompile("org.assertj:assertj-core:3.9.1")
+
+	testCompile("org.mockito:mockito-core:2.18.0")
+
 }
 
 wrapper {

@@ -1,17 +1,15 @@
 package mixed;
 
-import net.jqwik.api.*;
-import net.jqwik.api.constraints.AlphaChars;
+import calculator.Calculator;
 import org.junit.jupiter.api.*;
-import upper.Upperizer;
 
 class UpperizerJupiterTests {
 
-	Upperizer upperizer = new Upperizer();
+	Calculator calculator = new Calculator();
 
 	@Test
-	@DisplayName("Strings are upperized")
-	void allStringsAreUpperized() {
-		Assertions.assertEquals("HALLO", upperizer.upperize("hallo"));
+	@DisplayName("Numbers can be added")
+	void numbersCanBeAdded() {
+		Assertions.assertEquals(7, calculator.add(4, 3));
 	}
 }

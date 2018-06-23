@@ -1,16 +1,16 @@
 package mixed;
 
+import calculator.Calculator;
 import org.junit.*;
 import org.junit.jupiter.api.DisplayName;
-import upper.Upperizer;
 
 public class UpperizerVintageTests {
 
-	Upperizer upperizer = new Upperizer();
+	Calculator calculator = new Calculator();
 
 	@Test
-	@DisplayName("Strings are upperized")
-	public void allStringsAreUpperized() {
-		Assert.assertEquals("HALLO", upperizer.upperize("hallo"));
+	@DisplayName("Numbers can be added")
+	public void numbersCanBeAdded() {
+		Assert.assertEquals(7, calculator.add(4, 3));
 	}
 }

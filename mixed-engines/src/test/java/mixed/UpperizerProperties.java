@@ -1,16 +1,16 @@
 package mixed;
 
+import calculator.Calculator;
 import net.jqwik.api.*;
 import net.jqwik.api.constraints.AlphaChars;
-import upper.Upperizer;
 
 class UpperizerProperties {
 
-	Upperizer upperizer = new Upperizer();
+	Calculator calculator = new Calculator();
 
 	@Property
-	@Label("All strings are upperized")
-	boolean allStringsAreUpperized(@ForAll @AlphaChars String anyAlphaString) {
-		return upperizer.upperize(anyAlphaString).equals(anyAlphaString.toUpperCase());
+	@Label("All numbers can be add")
+	boolean allStringsAreUpperized(@ForAll int first, @ForAll int second) {
+		return calculator.add(first, second) == first + second;
 	}
 }

@@ -3,9 +3,15 @@ package mixed;
 import calculator.Calculator;
 import org.junit.jupiter.api.*;
 
-class UpperizerJupiterTests {
+class CalculatorJupiterTests {
 
-	Calculator calculator = new Calculator();
+	private Calculator calculator;
+
+	@BeforeEach
+	void createCalculator() {
+		calculator = new Calculator();
+		System.out.println("Hello from JUnit 5");
+	}
 
 	@Test
 	@DisplayName("Numbers can be added")

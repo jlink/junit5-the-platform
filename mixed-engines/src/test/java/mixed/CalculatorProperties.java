@@ -2,9 +2,8 @@ package mixed;
 
 import calculator.Calculator;
 import net.jqwik.api.*;
-import net.jqwik.api.constraints.AlphaChars;
 
-class UpperizerProperties {
+class CalculatorProperties {
 
 	Calculator calculator = new Calculator();
 

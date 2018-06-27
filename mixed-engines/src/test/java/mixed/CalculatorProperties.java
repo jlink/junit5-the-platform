@@ -7,10 +7,13 @@ class CalculatorProperties {
 
 	Calculator calculator = new Calculator();
 
+	CalculatorProperties() {
+		System.out.println("Hello from jqwik");
+	}
+
 	@Property
 	@Label("All numbers can be add")
 	boolean allNumbersCanBeAdded(@ForAll int first, @ForAll int second) {
-		//System.out.println("Hello from jqwik");
 		return calculator.add(first, second) == first + second;
 	}
 }

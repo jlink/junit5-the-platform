@@ -9,7 +9,8 @@ class CalculatorProperties {
 
 	@Property
 	@Label("All numbers can be add")
-	boolean allStringsAreUpperized(@ForAll int first, @ForAll int second) {
+	boolean allNumbersCanBeAdded(@ForAll int first, @ForAll int second) {
+		//System.out.println("Hello from jqwik");
 		return calculator.add(first, second) == first + second;
 	}
 }
